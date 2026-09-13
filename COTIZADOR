@@ -1,0 +1,32 @@
+print("SANTECH SERVICIO TÉCNICO \nCOTIZACIÓN DE SERVICIOS \nINGRESE TODOS LOS VALORES EN MAYÚSCULAS")
+servicio = input("Tipo de reparación: ", )
+repuesto = input("Requiere repuesto?: ", )
+repuesto = repuesto.upper()
+if repuesto == "SI":
+  cost_rep = int(input("Costo del repuesto: ")) *1.19
+repuesto2 = input("Requiere un segundo repuesto?: ", )
+repuesto2 = repuesto2.upper()
+if repuesto2 == "SI":
+  cost_rep2 = int(input("Costo del segundo repuesto: ")) *1.19
+else:
+  cost_rep2 = 0
+repuesto3 = input("Requiere un tercer repuesto? ", ) 
+repuesto3 == repuesto3.upper()
+if repuesto3 == "SI":
+  cost_rep3 = int(input("Costo del tercer repuesto: ", )) *1.19
+else:
+  cost_rep3 = 0
+repuesto4 = input("Requiere un cuarto repuesto? ", )
+repuesto4 = repuesto4.upper()
+if repuesto4 == "SI":
+  cost_rep4 = int(input("Costo del cuarto repuesto: ", )) *1.19
+else:
+   cost_rep4 = 0
+domicilio = input("Requiere envió y/o domicilio?: ", )
+if domicilio == "SI" or domicilio == "Si" or domicilio == "si":
+  cost_domi = int(input("Costo del domicilio: ", ))
+else:
+  cost_domi = 0     
+cost_serv = int(input("Ingrese el valor de mano de obra: ", ))
+cost_fin = cost_rep + cost_rep2 + cost_rep3 + cost_rep4 + cost_serv + cost_domi
+print("VALOR TOTAL: ", cost_fin)
