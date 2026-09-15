@@ -1,0 +1,22 @@
+print("Bienvenidos a la inspección preoperacional \nA continuación le seran solicitados su usuario y contraseña")
+clave1 = "So10100."
+usuario1 = "1010047205"
+acceso = ("Acceso correcto")
+sin_acceso = ("Usuario o clave incorrectos")
+intento = 1
+restantes = 2
+while intento <=3:
+  usuario = input("Usuario: ")
+  clave = input("Clave: ") 
+  if usuario == usuario1 and clave == clave1:
+    print(acceso)
+    break  
+  else:
+    print(sin_acceso)
+    if restantes == 0:
+      print("Usuario bloqueado")         
+    if restantes >= 1 and intento <=2:
+      print("Le quedan", restantes, "intentos restantes")  
+    intento = intento + 1
+    restantes = restantes - 1  
+    
